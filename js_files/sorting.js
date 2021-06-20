@@ -60,7 +60,7 @@ let arraySize = document.querySelector('#arr_sz');
 // Event listener to update the bars on the UI
 arraySize.addEventListener('input', function(){
     console.log(arraySize.value, typeof(arraySize.value));
-    createNewArray(parseInt(arraySize.value));
+    getArray(parseInt(arraySize.value));
 });
 
 // Default input for waitforme function (260ms)
