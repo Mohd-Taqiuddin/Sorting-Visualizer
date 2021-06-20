@@ -1,0 +1,37 @@
+
+div.txt > h2{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+
+.top-right{
+    right: 0;
+
+}
+
+/* .quick {
+    
+    float: right;
+}
+
+.bubble {
+    
+    float: right;
+}
+
+.insertion {
+    
+    float: right;
+}
+
+.merge {
+    
+    float: right;
+}
+
+.selection {
+    
+    float: right;
+} */
