@@ -72,7 +72,7 @@ let delayElement = document.querySelector('#speed_input');
 // Event listener to update delay time 
 delayElement.addEventListener('input', function(){
     console.log(delayElement.value, typeof(delayElement.value));
-    delay = 320 - parseInt(delayElement.value);
+    delay = 380 - parseInt(delayElement.value);
 });
 
 
