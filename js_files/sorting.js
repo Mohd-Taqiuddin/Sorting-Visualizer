@@ -24,7 +24,7 @@ function enableSortingButtons(){
     document.querySelector(".mergeSort").disabled = false;
     document.querySelector(".quickSort").disabled = false;
     document.querySelector(".selectionSort").disabled = false;
-    document.querySelector(".heapSort").disabled = true;
+    document.querySelector(".heapSort").disabled = false;
 }
 
 // disable size slider
