@@ -115,7 +115,7 @@ const newArray = document.querySelector(".newArray");
 newArray.addEventListener("click", function(){
     console.log("From newArray " + arraySize.value);
     console.log("From newArray " + delay);
-    enableSortingBtn();
+    enableSortingButtons();
     enableSizeSlider();
     getArray(arraySize.value);
 });
