@@ -11,8 +11,6 @@
 
 ### This is built using HTML, CSS, JavaScript <br/>
 
-[Check out the website here](https://abhishekprakash5.github.io/Sorting-Visualization/)
-
 ### Index page <br/>
 
 <img src="img/start.png"> <br/>
