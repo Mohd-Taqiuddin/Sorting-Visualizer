@@ -11,6 +11,9 @@ async function heapSort() {
 
     for(let i = n - 1; i >= 0; i--){
         await waitforme(delay);
+        await waitforme(delay);
+        await waitforme(delay);
+
         ele[0].style.background = 'orange';
         ele[i].style.background = 'orange';
 
@@ -38,8 +41,8 @@ async function heapify(ele, n, i) {
 
     if(largest != i){
         await waitforme(delay);
-        ele[i].style.background = 'orange';
-        ele[largest].style.background = 'orange';
+        ele[i].style.background = 'blue';
+        ele[largest].style.background = 'blue';
         swap(ele[i], ele[largest]);
 
         await waitforme(delay);
@@ -50,7 +53,7 @@ async function heapify(ele, n, i) {
 
 const heap = document.querySelector(".heapSort");
 heap.addEventListener('click', async function(){
-    console.log("CLICKED!!");
+    // console.log("CLICKED!!");
     disableSortingButtons();
     disableSizeSlider();
     disableNewArrayBtn();
