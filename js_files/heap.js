@@ -1,36 +1,49 @@
 async function heapSort() {
     const ele = document.querySelectorAll(".bar");
+    console.log('heapsort');
 
-    const ele = ele.length;
+    const n = ele.length;
 
-    for(let i = Math.floor(n / 2) - 1; i >- 0; i--){
-        heapify(ele, n, i);
+    for(let i = Math.floor(n / 2) - 1; i >= 0; i--){
+        await waitforme(delay);
+        await heapify(ele, n, i);
     }
 
-    for(let i = n - 1; i > 0; i--){
+    for(let i = n - 1; i >= 0; i--){
+        await waitforme(delay);
+        ele[0].style.background = 'orange';
+        ele[i].style.background = 'orange';
 
         swap(ele[0], ele[i]);
 
-        heapify(ele, i, 0);
+        ele[i].style.background = 'green';
+
+        await heapify(ele, i, 0);
     }
 }
 
 async function heapify(ele, n, i) {
 
+    console.log('heapify');
     var largest = i;
     var l = 2 * i + 1;
     var r = 2 * i + 2;
+    await waitforme(delay);
 
-    if(l < n && ele[l] > ele[largest])
+    if(l < n && parseInt(ele[l].style.height) > parseInt(ele[largest].style.height))
         largest = l;
 
-    if(r < n && ele[r] > ele[largest])
+    if(r < n && parseInt(ele[r].style.height) > parseInt(ele[largest].style.height))
         largest = r;
 
     if(largest != i){
+        await waitforme(delay);
+        ele[i].style.background = 'orange';
+        ele[largest].style.background = 'orange';
         swap(ele[i], ele[largest]);
 
-        heapify(ele, n, largest);
+        await waitforme(delay);
+        await heapify(ele, n, largest);
     }
 
 }
@@ -38,9 +51,6 @@ async function heapify(ele, n, i) {
 const heap = document.querySelector(".heapSort");
 heap.addEventListener('click', async function(){
     console.log("CLICKED!!");
-    // let ele = document.querySelectorAll('.bar');
-    // let l = 0;
-    // let r = parseInt(ele.length) - 1;
     disableSortingButtons();
     disableSizeSlider();
     disableNewArrayBtn();
